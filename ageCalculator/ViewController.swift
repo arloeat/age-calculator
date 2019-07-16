@@ -28,15 +28,15 @@ class ViewController: UIViewController {
         let calendar = Calendar.current
         
         //4 - use calendar to get difference between two dates
-        let components = calendar.dateComponents([.month], from: birthDate, to: today)
+        let components = calendar.dateComponents([.year, .month, .day], from: birthDate, to: today)
         
-//        let ageYears = components.year
+        let ageYears = components.year
         let ageMonths = components.month
-//        let ageDays = components.day
+        let ageDays = components.day
         
-        //5 - display age in label
-//        self.lblAge.text = "\(ageYears!) years, \(ageMonths!) months, \(ageDays!) days"
-        self.lblAge.text = "\(ageMonths!) months"
+//        5 - display age in label
+        self.lblAge.text = "\(ageYears!) years, \(ageMonths!) months, \(ageDays!) days"
+//        self.lblAge.text = "\(ageMonths!) months"
         
     }
     
